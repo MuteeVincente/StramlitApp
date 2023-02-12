@@ -3,9 +3,9 @@
 # ASSIGNMENT 2
 # SCIENTIFIC COMPUTING
 # build violin plots for the data set of lifeExp,population and GDP for the year 2007(use seaborn for guidance)....then use streamlit to present the data inform of a  data app for the above data sets....then present the assignmen
+import seaborn as sns
 import streamlit as st
 import pandas as pd
-import seaborn as sns
 import matplotlib.pyplot as plt
 
 st.title("VIOLIN PLOT WITH STREAMLIT")
