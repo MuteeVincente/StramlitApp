@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("Violin Plot for GDP, Population, and Life Expectancy")
 
 st.subheader("Vincent Mutethia, SCT211-0017/2019")
-st.subheader("Assignment 2 - Scientific Computing")
+st.subheader("Assignment - Scientific Computing")
 
 # Load data from a CSV file
 data = pd.read_csv("gapminder_with_codes.csv")
