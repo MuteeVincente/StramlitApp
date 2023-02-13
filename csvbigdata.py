@@ -15,7 +15,8 @@ st.subheader("VINCENT MUTETHIA")
 st.subheader('SCT211-0017/2019')
 
 data = pd.read_csv("gapminder_with_codes.csv")
-data_2007 = data[data['year']==2007][['gdpPercap', 'pop', 'lifeExp']]
+data_2007 = data[data['year']==2007][['gdpPercap']]
+# , 'pop', 'lifeExp'
 
 # Plot the data using a violin plot
 fig, ax = plt.subplots()
