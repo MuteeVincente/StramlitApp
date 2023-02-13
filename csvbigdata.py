@@ -1,61 +1,42 @@
-
-# VINCENT MUTETHIA ,SCT211-0017/2019
-# ASSIGNMENT 2
-# SCIENTIFIC COMPUTING
-# build violin plots for the data set of lifeExp,population and GDP for the year 2007(use seaborn for guidance)....then use streamlit to present the data inform of a  data app for the above data sets....then present the assignmen
 import seaborn as sns  
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.title("VIOLIN PLOT WITH STREAMLIT")
-st.subheader("ASSIGNMENT 2")
-# Load data from a CSV file
-st.subheader("VINCENT MUTETHIA")
-st.subheader('SCT211-0017/2019')
+st.title("Violin Plot for GDP, Population, and Life Expectancy")
 
+st.subheader("Vincent Mutethia, SCT211-0017/2019")
+st.subheader("Assignment 2 - Scientific Computing")
+
+# Load data from a CSV file
 data = pd.read_csv("gapminder_with_codes.csv")
-data_2007 = data[data['year']==2007][['gdpPercap']]
-# , 'pop', 'lifeExp'
+data_2007 = data[data['year']==2007]
 
 # Plot the data using a violin plot
+# GDP
 fig, ax = plt.subplots()
-sns.violinplot(data=data_2007, ax=ax)
-plt.title("GDP  in 2007\n", fontweight='bold')
-
+sns.violinplot(data=data_2007, x='gdpPercap', ax=ax)
 ax.set_xlabel("GDP", fontweight='bold')
 ax.set_ylabel("Values", fontweight='bold')
-
+plt.title("GDP in 2007\n", fontweight='bold')
 
 # Display the plot in the Streamlit app
 st.pyplot(fig)
 
-# st.set_option('deprecation.showPyplotGlobalUse', False)
-
-
 # POPULATION 
-
-data_pop = data[data['year'] == 2007][['pop']]
-
-fig2 , ax2 = plt.subplots()
-
-sns.violinplot(data=data_pop , ax=ax2)
-
-ax2.set_xlabel("POPULATION", fontweight='bold')
+fig2, ax2 = plt.subplots()
+sns.violinplot(data=data_2007, x='pop', ax=ax2)
+ax2.set_xlabel("Population", fontweight='bold')
 ax2.set_ylabel("Values", fontweight='bold')
+plt.title("Population in 2007\n", fontweight='bold')
 
 st.pyplot(fig2)
 
-#LIFE EXPECTANCY
-data_exp = data[data['year'] == 2007][['lifeExp']]
-
-fig3 , ax3 = plt.subplots()
-
-sns.violinplot(data=data_exp , ax=ax3)
-
-ax3.set_xlabel("LIFE EXPECTANCY", fontweight='bold')
+# LIFE EXPECTANCY
+fig3, ax3 = plt.subplots()
+sns.violinplot(data=data_2007, x='lifeExp', ax=ax3)
+ax3.set_xlabel("Life Expectancy", fontweight='bold')
 ax3.set_ylabel("Values", fontweight='bold')
+plt.title("Life Expectancy in 2007\n", fontweight='bold')
 
 st.pyplot(fig3)
-
-
