@@ -16,8 +16,8 @@ data_2007 = data[data['year']==2007]
 # GDP
 fig, ax = plt.subplots()
 sns.violinplot(data=data_2007, x='gdpPercap', ax=ax)
-ax.set_xlabel("GDP", fontweight='bold')
-ax.set_ylabel("Values", fontweight='bold')
+ax.set_ylabel("GDP", fontweight='bold')
+ax.set_xlabel("Values", fontweight='bold')
 plt.title("GDP in 2007\n", fontweight='bold')
 
 # Display the plot in the Streamlit app
@@ -26,8 +26,8 @@ st.pyplot(fig)
 # POPULATION 
 fig2, ax2 = plt.subplots()
 sns.violinplot(data=data_2007, x='pop', ax=ax2)
-ax2.set_xlabel("Population", fontweight='bold')
-ax2.set_ylabel("Values", fontweight='bold')
+ax2.set_ylabel("Population", fontweight='bold')
+ax2.set_xlabel("Values", fontweight='bold')
 plt.title("Population in 2007\n", fontweight='bold')
 
 st.pyplot(fig2)
@@ -35,8 +35,8 @@ st.pyplot(fig2)
 # LIFE EXPECTANCY
 fig3, ax3 = plt.subplots()
 sns.violinplot(data=data_2007, x='lifeExp', ax=ax3)
-ax3.set_xlabel("Life Expectancy", fontweight='bold')
-ax3.set_ylabel("Values", fontweight='bold')
+ax3.set_ylabel("Life Expectancy", fontweight='bold')
+ax3.set_xlabel("Values", fontweight='bold')
 plt.title("Life Expectancy in 2007\n", fontweight='bold')
 
 st.pyplot(fig3)
